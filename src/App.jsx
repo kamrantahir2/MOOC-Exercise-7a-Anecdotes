@@ -17,10 +17,12 @@ const CreateNew = (props) => {
 
   const reset = (e) => {
     e.preventDefault();
-    content.reset();
-    author.reset();
-    info.reset();
+    content.onChange(e);
+    author.onChange(e);
+    info.onChange(e);
   };
+
+  const reducedContent = { ...content };
 
   const handleSubmit = (e) => {
     e.preventDefault();
