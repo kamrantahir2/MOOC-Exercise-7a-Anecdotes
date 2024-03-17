@@ -6,6 +6,8 @@ const AnecdoteList = ({ anecdotes }) => (
     <ul>
       {anecdotes.map((anecdote) => (
         <li key={anecdote.id}>
+          {console.log(anecdote)}
+
           <Link to={`/${anecdote.id}`}>{anecdote.content}</Link>
         </li>
       ))}
